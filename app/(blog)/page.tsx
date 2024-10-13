@@ -87,6 +87,7 @@ export default async function Page() {
     <div className="">
       <Image
         src={"/a9.png"}
+        unoptimized={true}
         width={100}
         height={100}
         alt="logo da a9 2"
