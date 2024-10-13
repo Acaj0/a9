@@ -17,6 +17,7 @@ export default function NavBar() {
           <div className="w-[40px]">
             <AspectRatio ratio={4 / 4}>
               <Image
+              unoptimized={true}
                 src={"/a9.png"}
                 fill
                 alt="logo da A9"
