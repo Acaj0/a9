@@ -84,7 +84,7 @@ export default async function Page() {
 
   return (
     <div className="">
-      <div className="h-screen bg-cover bg-top bg-no-repeat bg-[url(/fundo.JPEG)]">
+      <div className="h-screen bg-cover bg-top bg-no-repeat bg-[url(/fundo.jpeg)]">
         <NavBar></NavBar>
       </div>
       <div className="container mx-auto px-5  ">
