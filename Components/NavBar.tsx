@@ -36,7 +36,7 @@ export default function NavBar() {
               <Image
                 src={"/a9.png"}
                 fill
-                alt="logo da a9"
+                alt="logo da a9 2"
                 className="rounded-md object-cover"
               />
             </AspectRatio>
