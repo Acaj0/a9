@@ -11,7 +11,9 @@ import { Button } from "./ui/button";
 
 export default function NavBar() {
   return (
+    
     <div>
+      <h1>sesxo</h1>
       <div className="bg-[#014893] h-12 flex md:hidden justify-between items-center p-2">
         <a href="/">
           <div className="w-[40px]">

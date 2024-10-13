@@ -12,7 +12,7 @@ import type { HeroQueryResult } from "@/sanity.types";
 import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { heroQuery, settingsQuery } from "@/sanity/lib/queries";
-import NavBar from "@/Components/NavBar";
+import NavBar from "@/components/NavBar";
 
 function Intro(props: { title: string | null | undefined; description: any }) {
   const title = props.title || demo.title;
@@ -84,7 +84,7 @@ export default async function Page() {
 
   return (
     <div className="">
-      <div className="h-screen bg-cover bg-no-repeat bg-[url(/fundo.JPEG)] relative z-40 ">
+      <div className="h-screen bg-cover bg-top bg-no-repeat bg-[url(/fundo.JPEG)]">
         <NavBar></NavBar>
       </div>
       <div className="container mx-auto px-5  ">
