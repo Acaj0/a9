@@ -7,7 +7,7 @@ import {
   toPlainText,
   type PortableTextBlock,
 } from "next-sanity";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { draftMode } from "next/headers";
 import { Suspense } from "react";
 
@@ -51,7 +51,7 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const inter = Inter({
+const montserrat = Montserrat({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
@@ -101,7 +101,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt" className={`${inter.variable} bg-white text-black`}>
+    <html lang="pt" className={`${montserrat.variable} bg-white text-black`}>
       <body>
         <section className="min-h-screen">
           {draftMode().isEnabled && <AlertBanner />}
