@@ -15,7 +15,7 @@ import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { postQuery, settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
-import NavBar from "@/components/NavBar";
+import NavBar from "../../components/NavBar";
 
 type Props = {
   params: { slug: string };
