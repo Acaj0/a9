@@ -84,10 +84,10 @@ export default async function Page() {
 
   return (
     <div className="">
-      <div className="h-screen bg-cover bg-no-repeat bg-[url(/fundo.JPEG)] relative z-40 ">
-        <NavBar></NavBar>
-      </div>
       <div className="container mx-auto px-5  ">
+        <div className="h-screen bg-cover bg-no-repeat bg-[url(/fundo.JPEG)] relative z-40 ">
+          <NavBar></NavBar>
+        </div>
         <Intro title={settings?.title} description={settings?.description} />
         {heroPost ? (
           <HeroPost
