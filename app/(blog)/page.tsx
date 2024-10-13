@@ -12,6 +12,7 @@ import type { HeroQueryResult } from "@/sanity.types";
 import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { heroQuery, settingsQuery } from "@/sanity/lib/queries";
+import NavBar from "@/Components/NavBar";
 
 function Intro(props: { title: string | null | undefined; description: any }) {
   const title = props.title || demo.title;
@@ -19,7 +20,7 @@ function Intro(props: { title: string | null | undefined; description: any }) {
     ? props.description
     : demo.description;
   return (
-    <section className="mt-16 mb-16 flex flex-col items-center lg:mb-12 lg:flex-row lg:justify-between">
+    <section className=" flex flex-col items-center lg:mb-12 lg:flex-row lg:justify-between">
       <h1 className="text-balance text-6xl font-bold leading-tight tracking-tighter lg:pr-8 lg:text-8xl">
         {title || demo.title}
       </h1>
@@ -82,30 +83,35 @@ export default async function Page() {
   ]);
 
   return (
-    <div className="container mx-auto px-5">
-      <Intro title={settings?.title} description={settings?.description} />
-      {heroPost ? (
-        <HeroPost
-          title={heroPost.title}
-          slug={heroPost.slug}
-          coverImage={heroPost.coverImage}
-          excerpt={heroPost.excerpt}
-          date={heroPost.date}
-          author={heroPost.author}
-        />
-      ) : (
-        <Onboarding />
-      )}
-      {heroPost?._id && (
-        <aside>
-          <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
-            More Stories
-          </h2>
-          <Suspense>
-            <MoreStories skip={heroPost._id} limit={100} />
-          </Suspense>
-        </aside>
-      )}
+    <div className="">
+      <div className="h-screen bg-cover bg-no-repeat bg-[url(/fundo.JPEG)] relative z-40 ">
+        <NavBar></NavBar>
+      </div>
+      <div className="container mx-auto px-5  ">
+        <Intro title={settings?.title} description={settings?.description} />
+        {heroPost ? (
+          <HeroPost
+            title={heroPost.title}
+            slug={heroPost.slug}
+            coverImage={heroPost.coverImage}
+            excerpt={heroPost.excerpt}
+            date={heroPost.date}
+            author={heroPost.author}
+          />
+        ) : (
+          <Onboarding />
+        )}
+        {heroPost?._id && (
+          <aside>
+            <h2 className="mb-8 text-6xl font-bold leading-tight tracking-tighter md:text-7xl">
+              More Stories
+            </h2>
+            <Suspense>
+              <MoreStories skip={heroPost._id} limit={100} />
+            </Suspense>
+          </aside>
+        )}
+      </div>
     </div>
   );
 }

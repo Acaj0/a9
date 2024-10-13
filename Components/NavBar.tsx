@@ -12,14 +12,14 @@ import { Button } from "./ui/button";
 export default function NavBar() {
   return (
     <div>
-      <div className="bg-[#151618] h-12 flex md:hidden justify-between items-center p-2">
+      <div className="bg-[#014893] h-12 flex md:hidden justify-between items-center p-2">
         <a href="/">
           <div className="w-[40px]">
             <AspectRatio ratio={4 / 4}>
               <Image
                 src={"/a9.png"}
                 fill
-                alt="logo da banda"
+                alt="logo da A9"
                 className="rounded-md object-cover"
               />
             </AspectRatio>
@@ -28,44 +28,37 @@ export default function NavBar() {
         <h1 className="italic text-xl text-white"></h1> <MobileNav />{" "}
       </div>
 
-      <div className="hidden bg-[#151618] h-24 md:flex justify-center items-center gap-20 text-xl text-white">
-        <div className="hidden bg-[#151618] h-24 md:flex justify-between items-center ml-14 gap-20 text-xl text-white">
+      <div className="hidden h-24 md:flex justify-between px-28 items-center gap-20 text-xl text-white">
+        <a href="/">
+          <div className="w-[90px]">
+            <AspectRatio ratio={4 / 4}>
+              <Image
+                src={"/a9.png"}
+                fill
+                alt="logo da a9"
+                className="rounded-md object-cover"
+              />
+            </AspectRatio>
+          </div>
+        </a>
+        <div className="hidden h-24 md:flex justify-between items-center ml-14 gap-20 text-xl text-white">
           <a
             className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 hover:text-gray-200"
-            href="/shows"
+            href="/"
           >
-            SHOWS
+            Sobre Nós
           </a>
           <a
             className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 hover:text-gray-200"
-            href="/setlist"
+            href="/"
           >
-            SETLIST
-          </a>
-          <a href="/">
-            <div className="w-[90px]">
-              <AspectRatio ratio={4 / 4}>
-                <Image
-                  src={"/a9.png"}
-                  fill
-                  alt="logo da banda"
-                  className="rounded-md object-cover"
-                />
-              </AspectRatio>
-            </div>
-          </a>
-
-          <a
-            className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 hover:text-gray-200"
-            href="https://www.instagram.com/digito.zero/"
-          >
-            INSTAGRAM
+            Serviços
           </a>
           <a
             className="transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-100 hover:text-gray-200"
-            href="https://api.whatsapp.com/send?phone=5571982471477&text=Ola,%20gostaria%20de%20contratar%20a%20digito%20zero!"
+            href="/"
           >
-            CONTATO
+            Contato
           </a>
         </div>
       </div>
@@ -93,16 +86,12 @@ const MobileNav = () => {
           </svg>
         </Button>
       </SheetTrigger>
-
       <SheetContent>
         <div className="mt-10 flex flex-col gap-6 text-base font-semibold">
-          <a href="/">HOME</a>
-          <a href="/shows">SHOWS</a>
-          <a href="/setlist">SETLIST</a>
-          <a href="https://www.instagram.com/digito.zero/">INSTAGRAM</a>
-          <a href="https://api.whatsapp.com/send?phone=5571982471477&text=Ola,%20gostaria%20de%20contratar%20a%20digito%20zero!">
-            CONTATO
-          </a>
+          <a href="/">Inicio</a>
+          <a href="/">Sobre Nós</a>
+          <a href="/">Serviços</a>
+          <a href="/">Contato</a>
         </div>
       </SheetContent>
     </Sheet>
