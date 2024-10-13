@@ -18,10 +18,10 @@ import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
-import Image from "next/image";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
+// import Image from "next/image";
+// import { AspectRatio } from "@/components/ui/aspect-ratio";
+// import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+// import { Button } from "@/components/ui/button";
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await sanityFetch({
     query: settingsQuery,
