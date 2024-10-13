@@ -13,6 +13,7 @@ import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { heroQuery, settingsQuery } from "@/sanity/lib/queries";
 import NavBar from "./components/NavBar";
+import Image from "next/image";
 
 function Intro(props: { title: string | null | undefined; description: any }) {
   const title = props.title || demo.title;
@@ -84,6 +85,13 @@ export default async function Page() {
 
   return (
     <div className="">
+      <Image
+        src={"/a9.png"}
+        width={100}
+        height={100}
+        alt="logo da a9 2"
+        className="rounded-md object-cover"
+      />
       <div className="h-screen bg-cover bg-top bg-no-repeat bg-[url(/fundo.jpeg)]">
         <NavBar></NavBar>
       </div>
